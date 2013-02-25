@@ -1,3 +1,4 @@
 *.p
 *.csv
 /old_stuff
+*.svg
