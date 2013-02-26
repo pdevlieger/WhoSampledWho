@@ -21,17 +21,38 @@ There are four main visualizations:
 * Artists that sample other artists.
 * Artists that are being sampled by other artists. 
 
-
+This graph present nodes proportionally to the amount of covers the artists has performed. This means 
+that artists with larger nodes have covered many songs from other artists. The most avid cover artists 
+(e.g. Frank Sinatra or Ella Fitzgerald) seem to be 'from back in the days', but overall quite many artists 
+seem to resort to covers.
 
 ![Artists that cover](https://raw.github.com/pdevlieger/WhoSampledWho/master/covers_10000.png)
 
+When looking at the artists that are _being_ covered, it is clear that most of the covers come from some 
+key artists. The frontrunners are the Beatles with 12 songs that have been covered. Hiram Sherman, 
+Frances Mercer, Hollis Shaw and Ralph Stuart only have one song that was covered; All the Things You Are, 
+performed in the 1939 musical Very Warm for May, that later became a very popular jazz song. Overall, there 
+are much less artists that are being covered than artists that cover.
+
 ![Artists that are covered](https://raw.github.com/pdevlieger/WhoSampledWho/master/covered_10000.png)
+
+What about samples? Overall, there are not that many artists that sample. De La Soul, Public Enemy and 
+A Tribe Called Quest are definitely very avid sampling artists. But who do they sample?
 
 ![Artists that sample](https://raw.github.com/pdevlieger/WhoSampledWho/master/samples_10000.png)
 
+There are quite many artists that are being sampled! Not surprisingly, much of these artists are funk and soul 
+artists from the seventies. Especially when we take away artists that have at least 2 edges (where an edge is 
+defined as a sample), the field becomes a bit more sparse. The biggest surprise for me here were Pink Floyd and 
+the Steve Miller Band. 
+
 ![Artists that are covered](https://raw.github.com/pdevlieger/WhoSampledWho/master/sampled_10000.png)
 
+![Artists that are covered](https://raw.github.com/pdevlieger/WhoSampledWho/master/sampled_10000_2edges.png)
 
+There are also some artists that really like each other. 
+
+![Artists that are covered](https://raw.github.com/pdevlieger/WhoSampledWho/master/turbonegro.png)
 ## Final thoughts?
 
 First of all, many thanks to the people at [SecondHandSongs](http:www.secondhandsongs.com)! The 
