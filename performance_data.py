@@ -99,17 +99,32 @@ def information_by_batch(start, end, list):
 def write_to_file(data, output_name):
     pickle.dump(data, open(output_name, 'wb'))
 
-def write_data_to_csv(input, output = 'dataset.csv'):
+def write_cover_data_to_csv(input, output = 'cover_dataset.csv'):
     f = open(output, 'wb')
     
     for dict in input:
         name = dict['name']
         if dict['covers']:
             for cover in dict['covers']:
-                f.write('"%s","%s"\n' % (cover[0].encode('utf8'), name.encode('utf8')))
+                f.write('"%s","%s"\n' % (cover[0].replace('"', '').encode('utf8'), name.replace('"', '').encode('utf8')))
         elif dict['original']:
             for original in dict['original']:
-                f.write('"%s","%s"\n' % (name.encode('utf8'), cover[0].encode('utf8')))
+                f.write('"%s","%s"\n' % (name.replace('"', '').encode('utf8'), original[0].replace('"', '').encode('utf8')))
         else:
-            f.write('"%s"\n' % (name.encode('utf8')))
+            f.write('"%s"\n' % (name.replace('"', '').encode('utf8')))
+    f.close()
+
+def write_sample_data_to_csv(input, output = 'sample_dataset.csv'):
+    f = open(output, 'wb')
+    
+    for dict in input:
+        name = dict['name']
+        if dict['sampledBy']:
+            for sampler in dict['sampledBy']:
+                f.write('"%s","%s"\n' % (name.replace('"', '').encode('utf8'), sampler[0].replace('"', '').encode('utf8')))
+        elif dict['usesSamplesFrom']:
+            for sampled in dict['usesSamplesFrom']:
+                f.write('"%s","%s"\n' % (sampled[0].replace('"', '').encode('utf8'), name.replace('"', '').encode('utf8')))
+        else:
+            f.write('"%s"\n' % (name.replace('"', '').encode('utf8')))
     f.close()
