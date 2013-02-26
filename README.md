@@ -50,9 +50,6 @@ the Steve Miller Band.
 
 ![Artists that are covered](https://raw.github.com/pdevlieger/WhoSampledWho/master/sampled_10000_2edges.png)
 
-There are also some artists that really like each other. 
-
-![Artists that are covered](https://raw.github.com/pdevlieger/WhoSampledWho/master/turbonegro.png)
 ## Final thoughts?
 
 First of all, many thanks to the people at [SecondHandSongs](http:www.secondhandsongs.com)! The 
